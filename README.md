@@ -11,24 +11,23 @@ https://github.com/HL7/ig-template-base
 
 ## Template inclusions
 
-### 1. ./content/assets
-#### a) css styling - css/hl7.css
-Incorporated via `includes/_append.fragment-css.html`
+### 1. ./includes
+#### a) `/_append.fragment-css.html`
+css styling - css/hl7.css
 
 * footer background colour
 * navbar inverse colour
 * generic settings common to all HL7 IGs
 * note-to-balloters styling
 
-#### b) images
-* HL7AU Australia logo in header `hl7-logo.png` - incorporated via `includes/_append.fragment-header.html`
-* `hl7-au-logo-header.png` - not used, it seems
-* `search.png` - TBD
+#### b) `/_append.fragment-header.html`
+To the header, adds:
+* HL7AU Australia logo in header, on the left side `hl7-logo.png`
 
 ### 2. ./layouts
 #### a) `layout-ext.html`
 This is the layout template for all extensions and it is changed from the [upstream version](https://github.com/HL7/ig-template-base/blob/master/layouts/layout-ext.html) in these material ways:
-* the heading "Context of Use" is not present (*why would this be needed?*). Other IGs like US Core have retained this option to what I think is a better means of identifying the context of use.
+* the heading "Context of Use" is not present (*why would this be needed?*). Other IGs like US Core have retained this option with what I think is a better means of identifying the context of use.
 * the heading "Usage info" is not present (*this probably should also be removed in the upstream version*)
 * the tab `Text Summary` has been commented out, and therefore is not rendered in an IG
 
